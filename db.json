@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "id": "7wgfy",
+      "name": "Rico",
+      "jobTitle": "Developer"
+    },
+    {
+      "id": "7giadsaf4g4",
+      "name": "Bing",
+      "jobTitle": "Banker"
+    },
+    {
+      "id": "bs09y89y4",
+      "name": "Fanny",
+      "jobTitle": "Sales"
+    }
+  ],
+  "properties": [
+    {
+      "id": "du54trs",
+      "name": "studio type",
+      "location": "Laguna..."
+    },
+    {
+      "id": "dtrujdyh",
+      "name": "Hacienda Teresita",
+      "location": "Pampanga..."
+    },
+    {
+      "id": "yliugyy",
+      "name": "apartment",
+      "location": "Lipa..."
+    },
+    {
+      "name": "calle tomas studio",
+      "location": "calle tomas, madrid ciudad",
+      "id": "ohkpb8f"
+    }
+  ],
+  "users": [
+    {
+      "email": "zeb@gmail.com",
+      "password": "$2a$10$DHi7g74fqA8gWscPkByKz.st/2yJQZt1E7F9EZx/LhdAkaio3gKi6",
+      "id": "9gIzkXe"
+    },
+    {
+      "email": "student.devlin@gmail.com",
+      "password": "$2a$10$OG2sLECRs.KWGXha1eV71eqirveIKtS9jTDSa9Dui8JSRnAuQTECW",
+      "id": "A7G2TZD"
+    },
+    {
+      "email": "devlin@gmail.com",
+      "password": "$2a$10$GQdarzltogxlWO2IGSVEyutwvxG.CdzYzjWp33fYtrRkolB1w2GKK",
+      "id": "3jYb42q"
+    }
+  ]
+}

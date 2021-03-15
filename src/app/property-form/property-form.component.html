@@ -1,0 +1,21 @@
+<form [formGroup]="itemForm" (ngSubmit)="handleSubmit()">
+  <section>
+    <label>
+      name
+      <input formControlName="name" type="text" />
+    </label>
+  </section>
+  <section>
+    <label>
+      location
+      <input formControlName="location" type="text" />
+    </label>
+  </section>
+  <section>
+    <button [disabled]="!itemForm.valid">SEND</button>
+  </section>
+</form>
+<pre>values: {{ itemForm.value | json }}</pre>
+<pre>isValid: {{ itemForm.valid | json }}</pre>
+<pre>name's errors: {{ name.errors | json }}</pre>
+<pre>location's errors: {{ location.errors | json }}</pre>
