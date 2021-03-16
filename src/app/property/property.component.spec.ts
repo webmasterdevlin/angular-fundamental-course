@@ -1,32 +1,30 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import { PropertyComponent } from './property.component';
+import { PropertyService } from './property.service';
+import { PROPERTIES } from '../mocks/mock-properties';
 
-import { ProfileService } from './profile.service';
-import { ProfileComponent } from './profile.component';
-import { PROFILES } from '../mocks/mock-profiles';
-
-describe('ProfileComponent', () => {
-  let component: ProfileComponent;
-  let fixture: ComponentFixture<ProfileComponent>;
+describe('PropertyComponent', () => {
+  let component: PropertyComponent;
+  let fixture: ComponentFixture<PropertyComponent>;
 
   beforeEach(
     waitForAsync(() => {
-      const svcSpy = jasmine.createSpyObj<ProfileService>(['getProfiles']);
-      svcSpy.getProfiles.and.returnValue(of(PROFILES));
+      const svcSpy = jasmine.createSpyObj<PropertyService>(['getProperties']);
+      svcSpy.getProperties.and.returnValue(of(PROPERTIES));
 
       TestBed.configureTestingModule({
-        declarations: [ProfileComponent],
-        providers: [{ provide: ProfileService, useValue: svcSpy }],
+        declarations: [PropertyComponent],
+        providers: [{ provide: PropertyService, useValue: svcSpy }],
       }).compileComponents();
     })
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileComponent);
+    fixture = TestBed.createComponent(PropertyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    // component.ngOnInit(); // no need
   });
 
   it('should create component', function () {
@@ -34,7 +32,7 @@ describe('ProfileComponent', () => {
   });
 
   it('should create profiles', function () {
-    expect(component.profiles.length).toEqual(2);
+    expect(component.properties.length).toEqual(2);
 
     const names = fixture.debugElement.queryAll(By.css('.paragraph'));
     expect(names.length).toEqual(2);
