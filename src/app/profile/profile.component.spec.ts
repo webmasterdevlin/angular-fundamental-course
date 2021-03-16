@@ -25,8 +25,7 @@ describe('ProfileComponent', () => {
     fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    component.ngOnInit();
-    fixture.detectChanges();
+    // component.ngOnInit(); // no need
   });
 
   it('should create component', function () {
