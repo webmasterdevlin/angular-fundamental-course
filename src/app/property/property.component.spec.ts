@@ -35,9 +35,9 @@ describe('PropertyComponent', () => {
     expect(component.properties.length).toEqual(2);
 
     const names = fixture.debugElement.queryAll(By.css('.paragraph'));
-    expect(names.length).toEqual(2);
+    expect(names.length).toEqual(PROPERTIES.length);
 
     const compiled: HTMLElement = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('p').length).toEqual(2);
+    expect(compiled.querySelectorAll('p').length).toEqual(PROPERTIES.length);
   });
 });

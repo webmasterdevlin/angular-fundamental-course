@@ -34,12 +34,12 @@ describe('ProfileComponent', () => {
   });
 
   it('should create profiles', function () {
-    expect(component.profiles.length).toEqual(2);
+    expect(component.profiles.length).toEqual(PROFILES.length);
 
     const names = fixture.debugElement.queryAll(By.css('.paragraph'));
     expect(names.length).toEqual(2);
 
     const compiled: HTMLElement = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('p').length).toEqual(2);
+    expect(compiled.querySelectorAll('p').length).toEqual(PROFILES.length);
   });
 });

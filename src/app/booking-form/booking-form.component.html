@@ -2,7 +2,7 @@
   <section>
     <label>
       name
-      <input type="text" formControlName="name" />
+      <input type="text" formControlName="name" placeholder="test name" />
     </label>
   </section>
   <section>
@@ -12,7 +12,7 @@
     </label>
   </section>
   <section>
-    <button type="submit" [disabled]="!itemForm.valid">Submit</button>
+    <button class="button" type="submit">Submit</button>
   </section>
 </form>
 <pre>name: {{ name.errors | json }}</pre>

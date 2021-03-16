@@ -6,6 +6,6 @@
 <pre>{{ itemForm.value | json }}</pre>
 
 <section *ngFor="let book of bookings">
-  <div>Name: {{ book.name }}</div>
-  <div>Schedule: {{ readableSchedule(book.date) }}</div>
+  <h4>Name: {{ book.name }}</h4>
+  <h5>Schedule: {{ readableSchedule(book.date) }}</h5>
 </section>

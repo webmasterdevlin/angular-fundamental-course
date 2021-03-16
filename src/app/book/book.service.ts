@@ -10,7 +10,7 @@ import { Book } from './book';
 export class BookService {
   constructor(private http: HttpClient) {}
 
-  getBoookings(): Observable<Book[]> {
+  getBookings(): Observable<Book[]> {
     return this.http.get<Book[]>(environment.baseUrl + 'bookings');
   }
 

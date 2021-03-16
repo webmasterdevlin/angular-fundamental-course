@@ -18,7 +18,7 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
     this.formBuilderInit();
     this.bookService
-      .getBoookings()
+      .getBookings()
       .pipe(map((res) => (this.bookings = res)))
       .subscribe();
   }
@@ -38,8 +38,8 @@ export class BookComponent implements OnInit {
 
   private formBuilderInit(): void {
     this.itemForm = this.fb.group({
-      name: ['', [Validators.required]],
-      date: ['', [Validators.required]],
+      name: [''],
+      date: [''],
     });
   }
 }
