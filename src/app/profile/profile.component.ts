@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Profile } from './profile';
 import { ProfileService } from './profile.service';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +12,7 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileService) {}
 
   ngOnInit(): void {
-    console.log('send');
+    // console.log('send');
     this.profileService.getProfiles().subscribe((data: any) => {
       this.profiles = data;
     });

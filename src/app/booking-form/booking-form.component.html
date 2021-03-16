@@ -1,0 +1,19 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+  <section>
+    <label>
+      name
+      <input type="text" formControlName="name" />
+    </label>
+  </section>
+  <section>
+    <label>
+      date
+      <input type="datetime-local" formControlName="date" />
+    </label>
+  </section>
+  <section>
+    <button type="submit" [disabled]="!itemForm.valid">Submit</button>
+  </section>
+</form>
+<pre>name: {{ name.errors | json }}</pre>
+<pre>date: {{ date.errors | json }}</pre>

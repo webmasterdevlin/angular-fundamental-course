@@ -1,0 +1,11 @@
+<p>book works!</p>
+<app-booking-form
+  (handleSubmit)="handleSubmit()"
+  [itemForm]="itemForm"
+></app-booking-form>
+<pre>{{ itemForm.value | json }}</pre>
+
+<section *ngFor="let book of bookings">
+  <div>Name: {{ book.name }}</div>
+  <div>Schedule: {{ readableSchedule(book.date) }}</div>
+</section>

@@ -12,7 +12,7 @@
     </label>
   </section>
   <section>
-    <button [disabled]="!itemForm.valid">SEND</button>
+    <button type="submit" [disabled]="!itemForm.valid">SEND</button>
   </section>
 </form>
 <pre>values: {{ itemForm.value | json }}</pre>

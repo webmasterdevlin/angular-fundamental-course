@@ -38,6 +38,13 @@
       "id": "ohkpb8f"
     }
   ],
+  "bookings": [
+    {
+      "name": "chess",
+      "date": "2021-03-19T13:30",
+      "id": "tTUqUN-"
+    }
+  ],
   "users": [
     {
       "email": "zeb@gmail.com",

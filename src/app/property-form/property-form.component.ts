@@ -11,7 +11,10 @@ import { map } from 'rxjs/operators';
 export class PropertyFormComponent implements OnInit {
   itemForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: PropertyService) {}
+  constructor(
+    private fb: FormBuilder,
+    private propertyService: PropertyService
+  ) {}
 
   ngOnInit(): void {
     this.formBuilderInit();
@@ -26,7 +29,8 @@ export class PropertyFormComponent implements OnInit {
   }
 
   handleSubmit() {
-    this.service
+    // alert(JSON.stringify(this.itemForm.value, null, 2));
+    this.propertyService
       .postProperty(this.itemForm.value)
       .pipe(map((res) => alert(JSON.stringify(res, null, 2))))
       .subscribe();
