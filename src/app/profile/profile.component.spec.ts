@@ -38,7 +38,7 @@ describe('ProfileComponent', () => {
     const names = fixture.debugElement.queryAll(By.css('.paragraph'));
     expect(names.length).toEqual(2);
 
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled: HTMLElement = fixture.debugElement.nativeElement;
     expect(compiled.querySelectorAll('p').length).toEqual(2);
   });
 });
