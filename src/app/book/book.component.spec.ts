@@ -74,6 +74,7 @@ describe('BookComponent', () => {
 
     fixture.detectChanges();
 
+    /* TOFIX: fixture.detectChanges is not reliable */
     // expect(component.handleSubmit).toHaveBeenCalledTimes(1);
 
     // expect(fixture.debugElement.queryAll(By.css('yahoo')).length).toEqual(1);
