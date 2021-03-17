@@ -12,6 +12,7 @@ import { Book } from './book';
 export class BookComponent implements OnInit {
   itemForm: FormGroup;
   bookings: Book[] = [];
+  show = false;
 
   constructor(private fb: FormBuilder, private bookService: BookService) {}
 
@@ -24,6 +25,7 @@ export class BookComponent implements OnInit {
   }
 
   handleSubmit() {
+    this.show = true;
     // alert(JSON.stringify(this.itemForm.value, null, 2));
     this.bookService
       .postBooking(this.itemForm.value)
