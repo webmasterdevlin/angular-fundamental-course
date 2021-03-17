@@ -10,7 +10,14 @@ import { BookComponent } from './book/book.component';
 import { BookingFormComponent } from './booking-form/booking-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ProfileComponent, PropertyComponent, PropertyFormComponent, BookComponent, BookingFormComponent],
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+    PropertyComponent,
+    PropertyFormComponent,
+    BookComponent,
+    BookingFormComponent,
+  ],
   imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
